@@ -28,8 +28,9 @@ public:
 };
 
 int main() {
+  Solution s;
   vector<int> nums = {0,0,1,1,1,1,2,3,3};
-  int n = removeDuplicates(nums);
+  int n = s.removeDuplicates(nums);
   for(int i = 0; i < n; i++) {
     cout << nums[i] << ", ";
   }
