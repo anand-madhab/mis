@@ -42,7 +42,7 @@ def register_with_authority():
         print(f"[!] Critical Error: Cannot connect to Orchestrator at launch: {e}")
 
 @app.post("/execute_task")
-def execute_task(data: SecurePayload):
+async def execute_task(data: SecurePayload):
     global CONSUMED_NONCES
     try:
         # 1. Decode & verify Task Token using the saved Orchestrator Public Key
